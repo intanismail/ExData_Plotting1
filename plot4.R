@@ -11,7 +11,7 @@ data$Datetime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 data$Datetime <- as.POSIXct(data$Datetime)
 
 # Plot 4
-png(file="plot4.png",width=600,height=500)
+png(file = "plot4.png", width = 480, height = 480)
 par(mfrow = c(2,2), mar = c(4,4,2,1))
 with(data, {
    plot(Global_active_power ~ Datetime,

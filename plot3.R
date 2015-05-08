@@ -11,7 +11,7 @@ data$Datetime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 data$Datetime <- as.POSIXct(data$Datetime)
 
 # Plot 3
-png(file="plot3.png",width=400,height=350)
+png(file = "plot3.png", width = 480, height = 480)
 with(data,{ 
      plot(Sub_metering_1 ~ Datetime,
           type = "l",
