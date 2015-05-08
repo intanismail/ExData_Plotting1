@@ -10,13 +10,12 @@ data <- read.table(text = grep("^[1,2]/2/2007", readLines(file), value = TRUE),
 data$Datetime <- strptime(paste(data$Date, data$Time), "%d/%m/%Y %H:%M:%S")
 
 # Plot 1
+png(file="plot1.png",width=400,height=350)
 hist(data$Global_active_power, 
      main = "Global Active Power", 
      xlab = "Global Active Power (kilowatts)",
      xaxp = c(0, 6, 3),
      col = "red",
      xlim = c(0, 6),
-     ylim = c(0, 1200)
-     )
-dev.copy(png, file = "plot1.png")
+     ylim = c(0, 1200))
 dev.off()
